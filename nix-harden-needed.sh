@@ -8,7 +8,7 @@ nix-harden-needed-hook() {
     local dir="$prefix"
     [ -e "$dir" ] || return 1
 
-    header "Hardening the dynamic shared libraries in $dir"
+    echo "Hardening the dynamic shared libraries in $dir"
 
     for i in $(find $dir -type f -name '*.so*'); do
         # sometimes there can be linker scripts matching *.so*
